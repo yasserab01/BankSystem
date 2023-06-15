@@ -13,8 +13,8 @@
     "bank",
     "banksystem"
   ],
-  "author": "Paramjit singh",
-  "license": "MIT",
+  "author": "Abassi Yasser",
+  "license": "",
   "dependencies": {
     "body-parser": "^1.19.1",
     "dotenv": "^15.0.0",
