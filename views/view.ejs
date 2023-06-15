@@ -37,10 +37,10 @@
         <!-- - Back to all users -->
 
         <div class="container mt-2">
-          <a href="/data" class="btn  fw-bold " style="background-color: rgb(36, 174, 162);">&larr; Back</a>
+          <a href="/data" class="btn btn-primary fw-bold">&larr; Back</a>
       </div>
 
-    <div class="container  text-center p-2 mt-3" style="background-color: rgb(36, 174, 162);">
+    <div class="container  text-center p-2 mt-3" style="background-color: #241571;">
         <h3 class="text-light fw-4">Sender Details</h3>
     </div>
     <!-- Sender Details -->
@@ -60,9 +60,9 @@
       </div>
      
   </div>
-<!-- Reciver -->
-  <div class="container   text-center p-2 mt-3" style="background-color: rgb(36, 174, 162);">
-    <h3 class="text-light fw-4">Reciver Details</h3>
+<!-- Receiver -->
+  <div class="container   text-center p-2 mt-3" style="background-color: #241571;">
+    <h3 class="text-light fw-4">Receiver Details</h3>
 </div>
    <div class="container">
     <form action="/transfer" method="POST" >
@@ -70,8 +70,8 @@
           <label for="exampleInputEmail1">From</label>
           <% data.forEach((e) => {%>
             <input type="hidden" name="SenderID" value="<%= e._id %>">
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="SenderName" placeholder="Enter User Name" readonly value="<%= e.name %>">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="SenderEmail" placeholder="Enter User Name" readonly value="<%= e.email %>">
+            <input type="text" class="form-control mt-1 " id="exampleInputEmail1" aria-describedby="emailHelp" name="SenderName" placeholder="Enter User Name" readonly value="<%= e.name %>"> 
+            <input type="email" class="form-control mt-2" id="exampleInputEmail1" aria-describedby="emailHelp" name="SenderEmail" placeholder="Enter User Name" readonly value="<%= e.email %>">
             
             <%}) %>
 
@@ -81,7 +81,7 @@
         <div class="form-group  mt-3">
           <label for="exampleInputEmail1">TO</label>
           <select class="form-select" name="reciverName">
-            <option selected>Select Reciver Name</option>
+            <option selected>Select Receiver Name</option>
             <% records.forEach((e)=>{%>
 
               <option> <%= e.name %></option>
@@ -90,9 +90,9 @@
           </select>
          
         </div>
-        <div class="form-group  mt-3">
+        <div class="form-group  mt-2">
             <select class="form-select"name="reciverEmail">
-            <option selected>Select Reciver Email</option>
+            <option selected>Select Receiver Email</option>
             <% records.forEach((e)=>{%>
               <option> <%= e.email %> </option>
 
@@ -108,7 +108,7 @@
 
             <input type="Amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="transferAmount" placeholder="Enter Amount" required>
     
-        <button type="submit" class="btn  mt-3 text-center"style="background-color: rgb(36, 174, 162);">Submit</button>
+        <button type="submit" class="btn mb-3 mt-3 text-center"style="background-color: rgb(36, 174, 162);">Submit</button>
       </form>
    </div>
     
